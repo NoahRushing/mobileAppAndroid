@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2022 David C. Harrison
+-->
+<resources>
+    <string name="app_name">CSE118 Assignment 3</string>
+    <string name="login">Login</string>
+    <string name="select_workspace">Workspaces</string>
+    <string name="select_channel">Channels</string>
+    <string name="select_message">Messages</string>
+    <string name="select_detail">Message</string>
+    <string name="next">Next</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="select_new_message">New Message</string>
+</resources>

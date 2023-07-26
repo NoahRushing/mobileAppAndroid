@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="edu.ucsc.cse118.assignment3.LoginFragment"
+        android:label="CSE118 Assignment 3"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_workspaceFragment"
+            app:destination="@id/workspaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workspaceFragment"
+        android:name="edu.ucsc.cse118.assignment3.MasterFragment"
+        android:label="Workspaces"
+        tools:layout="@layout/fragment_master">
+        <action
+            android:id="@+id/action_workspaceFragment_to_channelFragment"
+            app:destination="@id/channelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/channelFragment"
+        android:name="edu.ucsc.cse118.assignment3.ChannelFragment"
+        android:label="Channels"
+        tools:layout="@layout/fragment_master">
+        <action
+            android:id="@+id/action_channelFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="edu.ucsc.cse118.assignment3.MessageFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_master">
+        <action
+            android:id="@+id/actions_messages_to_single_message"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_messages_to_new_message"
+            app:destination="@id/fragmentNewMessage" />
+        <action
+            android:id="@+id/action_message_to_message"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="edu.ucsc.cse118.assignment3.DetailFragment"
+        android:label="MessageDetails"
+        tools:layout="@layout/fragment_master">
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewMessage"
+        android:name="edu.ucsc.cse118.assignment3.NewMessageFragment"
+        android:label="NewMessage"
+        tools:layout="@layout/fragment_master">
+        <action
+            android:id="@+id/action_new_message_to_messages"
+            app:destination="@id/messageFragment" />
+    </fragment>
+
+
+
+</navigation>
+
